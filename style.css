@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    color: white;
+}
+
+body{
+    background-color: rgb(15, 84, 129);
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.315);
+    backdrop-filter: blur(4px);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 24px;
+}
+
+header a ion-icon{
+    font-size: 24px;
+}
+
+#inicial{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#inicial img{
+    width: 300px ;
+    height: 300px;
+    border-radius: 50%;
+}
