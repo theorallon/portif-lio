@@ -1,32 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
-    color: white;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 body{
+    margin: 0;
+    padding: 0;
     background-color: rgb(15, 84, 129);
 }
 
 header{
-    background-color: rgba(255, 255, 255, 0.315);
-    backdrop-filter: blur(4px);
-    padding: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(4px);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header h1{
     font-size: 24px;
 }
 
-header a ion-icon{
-    font-size: 24px;
+#navLinks {
+    
+    display: flex;
+    align-items: center;
 }
 
+header a ion-icon{
+    color: white;
+    font-size: 24px;
+    margin-right: 8px;
+    padding: 8px;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+header a ion-icon:hover{
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+header select{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.534);
+    border: 1px solid rgba(255, 255, 255, 0.466);
+    border-radius: 15px;
+    padding: 8px 16px;
+}
+
+section{
+    height: calc(100vh + 60px);
+    padding-top: 60px;
+}
+
+
 #inicial{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
@@ -38,4 +81,9 @@ header a ion-icon{
     width: 300px ;
     height: 300px;
     border-radius: 50%;
+}
+
+#sobreMim{
+    background-color: white;
+    color: rgb(15, 84, 129);
 }
