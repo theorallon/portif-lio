@@ -87,3 +87,45 @@ section{
     background-color: white;
     color: rgb(15, 84, 129);
 }
+
+#contatos{
+    padding-top: 60px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+}
+
+#contatos a{
+    margin-right: 1rem;
+    background-color: rgba(0, 0, 0, 0.568);
+    border: 2px solid rgba(255, 255, 255, 0.486);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s;
+    box-shadow: 0px 12px 15px 3px rgba(0,0,0,0.35);
+}
+
+#contatos a#linkedin:hover{
+    transform: scale(105%);
+    border: 2px solid rgba(0, 183, 255, 0.795);
+    box-shadow: 0px 12px 15px 3px rgba(0, 174, 255, 0.226);
+}
+
+#contatos a#whatsapp:hover{
+    transform: scale(105%);
+    border: 2px solid rgb(21, 255, 0);
+    box-shadow: 0px 12px 15px 3px rgba(21, 255, 0, 0.35);
+}
+
+#contatos a img{
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
