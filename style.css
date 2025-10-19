@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0;
@@ -61,7 +61,7 @@ header select{
 }
 
 section{
-    height: calc(100vh + 60px);
+    height: calc(100vh);
     padding-top: 60px;
 }
 
@@ -81,6 +81,40 @@ section{
     width: 300px ;
     height: 300px;
     border-radius: 50%;
+}  
+
+#inicial a {
+    display: inline-flex; /* deixa imagem e texto lado a lado */
+    align-items: center;  /* centraliza verticalmente */
+    gap: 10px; /* espaço entre logo e texto */
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#inicial a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+#inicial a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 0; /* remove o arredondamento */
+    margin: 0; /* remove o espaçamento antigo */
+}
+
+#textoInicial h2{
+    font-size: 50px;
+}
+
+#inicial p{
+    font-size: 24px;
 }
 
 #sobreMim{
@@ -89,16 +123,27 @@ section{
 }
 
 #contatos{
-    padding-top: 60px;
-    padding-left: 2rem;
-    padding-right: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(22, 22, 22);
 }
 
-#contatos a{
+#contatos h2{
+    margin-bottom: 3rem;
+    color: white;
+
+}
+
+#contatosLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#contatosLinks a{
     margin-right: 1rem;
     background-color: rgba(0, 0, 0, 0.568);
     border: 2px solid rgba(255, 255, 255, 0.486);
@@ -109,21 +154,29 @@ section{
     justify-content: space-around;
     transition: 0.3s;
     box-shadow: 0px 12px 15px 3px rgba(0,0,0,0.35);
+    text-decoration: none;
+    color: white;
 }
 
-#contatos a#linkedin:hover{
+#contatosLinks a#linkedin:hover{
     transform: scale(105%);
     border: 2px solid rgba(0, 183, 255, 0.795);
-    box-shadow: 0px 12px 15px 3px rgba(0, 174, 255, 0.226);
+    box-shadow: 0px 12px 50px 3px rgba(0, 174, 255, 0.226);
 }
 
-#contatos a#whatsapp:hover{
+#contatosLinks a#whatsapp:hover{
     transform: scale(105%);
     border: 2px solid rgb(21, 255, 0);
-    box-shadow: 0px 12px 15px 3px rgba(21, 255, 0, 0.35);
+    box-shadow: 0px 12px 50px 3px rgba(21, 255, 0, 0.35);
 }
 
-#contatos a img{
+#contatosLinks a#github:hover{
+    transform: scale(105%);
+    border: 2px solid rgba(255, 255, 255, 0.781);
+    box-shadow: 0px 12px 50px 3px rgba(255, 255, 255, 0.144);
+}
+
+#contatosLinks a img{
     width: 40px;
     height: 40px;
     margin-right: 0.5rem;
