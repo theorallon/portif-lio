@@ -82,28 +82,31 @@ section{
 }
 
 #inicial img{
-    width: 300px ;
-    height: 300px;
+    width: 40vh ;
+    height: 40vh;
     border-radius: 50%;
 }  
 
 #inicial a {
-    display: inline-flex; /* deixa imagem e texto lado a lado */
-    align-items: center;  /* centraliza verticalmente */
-    gap: 10px; /* espaço entre logo e texto */
-    border: 2px solid white;
+    display: inline-flex;
+    align-items: center; 
+    gap: 10px; 
+    border: 1.5px solid rgba(255, 255, 255, 0.521);
     border-radius: 15px;
+    margin-top: 0.5rem;
     padding: 10px 20px;
-    color: white;
+    color: rgba(255, 255, 255, 0.774);
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ;
 }
 
 #inicial a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.247);
     transform: scale(1.05);
+    color: white;
+    border: 1px solid white;
 }
 
 #inicial a img {
@@ -118,11 +121,13 @@ section{
 }
 
 #inicial p{
+    display: flex;
+    align-items: center;
     font-size: 24px;
 }
 
 #sobreMim{
-    background-color: white;
+    background-color: rgb(235, 235, 235);
     color: rgb(15, 84, 129);
 }
 
@@ -170,8 +175,8 @@ section{
 
 #contatosLinks a#whatsapp:hover{
     transform: scale(105%);
-    border: 2px solid rgb(21, 255, 0);
-    box-shadow: 0px 12px 50px 3px rgba(21, 255, 0, 0.35);
+    border: 2px solid rgb(55, 192, 42);
+    box-shadow: 0px 12px 50px 3px rgba(22, 163, 9, 0.35);
 }
 
 #contatosLinks a#github:hover{
