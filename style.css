@@ -82,8 +82,8 @@ section{
 }
 
 #inicial img{
-    width: 40vh ;
-    height: 40vh;
+    width: 50vh ;
+    height: 50vh;
     border-radius: 50%;
 }  
 
@@ -130,6 +130,7 @@ section{
     background-color: rgb(235, 235, 235);
     color: rgb(15, 84, 129);
 }
+
 
 #contatos{
     display: flex;
@@ -191,3 +192,47 @@ section{
     margin-right: 0.5rem;
 }
 
+#projetos{
+    margin-top: 100px;
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projetos #cards{
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.project-card{
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.288);
+    width: 250px;
+    height: 400px;
+    margin: 0.5rem;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.432);
+    -webkit-box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.411);
+    -moz-box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.363);
+}
+
+.project-card img{
+    margin-top: 0.5rem;
+    border-radius: 20px;
+    width: 200px;
+    height: 120px;
+}
+
+.project-card a{
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 10px;
+    border-radius: ;
+}
