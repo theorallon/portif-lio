@@ -159,6 +159,7 @@ section{
     border: 2px solid rgba(255, 255, 255, 0.486);
     border-radius: 15px;
     padding: 20px;
+    width: 180px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -220,6 +221,7 @@ section{
     box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.432);
     -webkit-box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.411);
     -moz-box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.363);
+    justify-content: space-around;
 }
 
 .project-card img{
@@ -233,6 +235,6 @@ section{
     color: white;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.199);
-    padding: 10px;
-    border-radius: ;
+    padding: 16px;
+    border-radius: 15px;
 }
