@@ -129,6 +129,9 @@ section{
 #sobreMim{
     background-color: rgb(235, 235, 235);
     color: rgb(15, 84, 129);
+    padding-top: calc(60px + 1rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 
