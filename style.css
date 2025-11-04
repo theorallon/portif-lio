@@ -130,8 +130,12 @@ section{
     background-color: rgb(235, 235, 235);
     color: rgb(15, 84, 129);
     padding-top: calc(60px + 1rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+#sobreMim p{
+    margin-top: 1rem;
 }
 
 
@@ -170,7 +174,46 @@ section{
     box-shadow: 0px 12px 15px 3px rgba(0,0,0,0.35);
     text-decoration: none;
     color: white;
+    position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease;
 }
+
+#contatosLinks a::before {
+   content: "";
+  position: absolute;
+  top: -10%;
+  left: -60%; 
+  width: 40%;
+  height: 120%;
+  pointer-events: none;   
+  z-index: 0;             
+  transform: skewX(-25deg) translateX(0);
+  transition: transform 0.75s cubic-bezier(.2,.9,.2,1);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255, 255, 255, 0.158) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  filter: blur(6px);       /* deixa o feixe mais suave */
+}
+
+#contatosLinks a > * {
+  position: relative;
+  z-index: 1;
+}
+
+#contatosLinks a:hover {
+  transform: scale(1.05);
+}
+
+#contatosLinks a:hover::before {
+  /* translateX faz a travessia; valor 300% leva o feixe totalmente para fora à direita */
+  transform: skewX(-25deg) translateX(300%);
+  transition: transform 0.75s cubic-bezier(.2,.9,.2,1);
+}
+
 
 #contatosLinks a#linkedin:hover{
     transform: scale(105%);
@@ -210,34 +253,111 @@ section{
     margin-top: 0.5rem;
 }
 
-.project-card{
-    border: 2px solid white;
-    border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.288);
-    width: 250px;
-    height: 400px;
-    margin: 0.5rem;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.432);
-    -webkit-box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.411);
-    -moz-box-shadow: 1px 11px 50px -9px rgba(0, 0, 0, 0.363);
-    justify-content: space-around;
+/* ===== NOVOS CARDS DE PROJETO ===== */
+.project-card {
+  position: relative;
+  width: 260px;
+  height: 400px;
+  margin: 1rem;
+  padding: 1.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
 
-.project-card img{
-    margin-top: 0.5rem;
-    border-radius: 20px;
-    width: 200px;
-    height: 120px;
+/* ===== EFEITO DE ILUMINAÇÃO NO HOVER ===== */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.project-card a{
-    color: white;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.199);
-    padding: 16px;
-    border-radius: 15px;
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* ===== IMAGEM ===== */
+.project-card img {
+  width: 90%;
+  height: 140px;
+  border-radius: 15px;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: all 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+/* ===== TÍTULO E DESCRIÇÃO ===== */
+.project-card h3 {
+  font-size: 20px;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.project-card p {
+  font-size: 14px;
+  opacity: 0.85;
+  padding: 0 0.8rem;
+  line-height: 1.4;
+}
+
+/* ===== LINK ===== */
+.project-card a {
+  position: relative;
+  margin-top: 1rem;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card a::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.project-card a:hover::after {
+  width: 70%;
+}
+
+.project-card a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== HOVER DO CARD ===== */
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.45);
 }
