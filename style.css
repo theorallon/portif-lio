@@ -333,6 +333,21 @@ section{
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
+} 
+
+.project-card a #botao-github {
+  padding: 8px;
+  font-size: 30px;
+}
+
+.project-card a #botao-github:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.project-card a #botao-github ion-icon {
+  vertical-align: middle;
+  color: white;
+  font-size: 30px;
 }
 
 /* Hover geral */
