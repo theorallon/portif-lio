@@ -145,6 +145,7 @@ section{
     justify-content: center;
     align-items: center;
     background-color: rgb(22, 22, 22);
+    height: 500px;
 }
 
 #contatos h2{
@@ -372,4 +373,8 @@ section{
     width: 90%;
     height: auto;
   }
+}
+
+footer{
+    padding: 30px;
 }
